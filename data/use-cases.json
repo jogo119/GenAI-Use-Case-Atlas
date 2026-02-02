@@ -1,0 +1,1153 @@
+[
+  {
+    "id": "uc-001",
+    "title": "Analyst Copilot for Financial Research Summaries",
+    "company": {
+      "id": "co-001",
+      "name": "NorthRiver Bank",
+      "website": "https://example.com/northriver",
+      "industry": "finance",
+      "subIndustry": "Commercial Banking",
+      "sizeBand": "ENT",
+      "hqLocation": "New York, NY",
+      "description": "Regional commercial bank serving mid-market and enterprise clients."
+    },
+    "industryTags": ["finance"],
+    "functionTags": ["finance_ops", "analytics"],
+    "capabilityTags": ["knowledge_retrieval", "document_intelligence"],
+    "problemStatement": "Analysts spent hours assembling weekly market briefs from internal research and public filings.",
+    "solutionSummary": "Built an internal copilot that retrieves approved research, summarizes key moves, and drafts weekly briefs for analyst review.",
+    "workflowSteps": [
+      "Ingest approved research notes and SEC filings",
+      "Retrieve relevant passages with RAG",
+      "Draft summary and highlight risks",
+      "Analyst reviews and publishes"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Research content is tagged by compliance for permitted reuse.",
+    "valueMetrics": [
+      {"metric": "Time saved", "value": "4", "unit": "hours per analyst per week", "sourceRef": "src-001"}
+    ],
+    "risksAndMitigations": [
+      "Hallucinations mitigated with retrieval-only mode and analyst approval.",
+      "Output logged for audit review."
+    ],
+    "createdAt": "2024-01-15",
+    "updatedAt": "2024-05-10",
+    "lastVerifiedAt": "2024-05-10",
+    "confidenceScore": 82,
+    "sources": [
+      {
+        "id": "src-001",
+        "url": "https://example.com/northriver/ai-research-brief",
+        "title": "NorthRiver Bank launches analyst copilot",
+        "publisher": "NorthRiver Blog",
+        "publishedAt": "2024-02-12",
+        "retrievedAt": "2024-05-10",
+        "excerpt": "NorthRiver Bank described a GenAI assistant that drafts weekly research briefs from approved content.",
+        "sourceType": "blog",
+        "credibilityWeight": 0.7
+      }
+    ]
+  },
+  {
+    "id": "uc-002",
+    "title": "Clinical Notes Drafting Assistant",
+    "company": {
+      "id": "co-002",
+      "name": "MediSure Health",
+      "website": "https://example.com/medisure",
+      "industry": "healthcare",
+      "subIndustry": "Provider Network",
+      "sizeBand": "ENT",
+      "hqLocation": "Chicago, IL",
+      "description": "Integrated healthcare provider network."
+    },
+    "industryTags": ["healthcare"],
+    "functionTags": ["analytics", "compliance"],
+    "capabilityTags": ["document_intelligence", "workflow_orchestration"],
+    "problemStatement": "Clinicians needed to translate visit transcripts into standardized notes for the EHR.",
+    "solutionSummary": "Deployed a clinical notes assistant that drafts SOAP notes with clinician review and PHI controls.",
+    "workflowSteps": [
+      "Capture visit transcript",
+      "Summarize into structured SOAP template",
+      "Clinician edits and approves",
+      "Store in EHR with audit log"
+    ],
+    "deploymentType": "embedded_feature",
+    "maturityStage": "pilot",
+    "modelInfo": {
+      "vendor": "Azure OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": false,
+      "fineTune": true
+    },
+    "dataSensitivity": "PHI",
+    "governanceNotes": "HIPAA-aligned retention, with PHI redaction in logs.",
+    "valueMetrics": [
+      {"metric": "Documentation time reduction", "value": "22", "unit": "%", "sourceRef": "src-002"}
+    ],
+    "risksAndMitigations": [
+      "Clinician approval required before EHR writeback.",
+      "PHI access restricted to care team."
+    ],
+    "createdAt": "2024-02-02",
+    "updatedAt": "2024-04-18",
+    "lastVerifiedAt": "2024-04-18",
+    "confidenceScore": 77,
+    "sources": [
+      {
+        "id": "src-002",
+        "url": "https://example.com/medisure/clinical-notes-pilot",
+        "title": "MediSure pilots GenAI documentation assistant",
+        "publisher": "MediSure Newsroom",
+        "publishedAt": "2024-03-05",
+        "retrievedAt": "2024-04-18",
+        "excerpt": "The pilot focuses on reducing clinician documentation time with mandatory approvals.",
+        "sourceType": "press",
+        "credibilityWeight": 0.8
+      }
+    ]
+  },
+  {
+    "id": "uc-003",
+    "title": "Student Support Chatbot for Enrollment",
+    "company": {
+      "id": "co-003",
+      "name": "Brighton University",
+      "website": "https://example.com/brighton",
+      "industry": "education",
+      "subIndustry": "Higher Education",
+      "sizeBand": "ENT",
+      "hqLocation": "Boston, MA",
+      "description": "Public university focused on STEM programs."
+    },
+    "industryTags": ["education"],
+    "functionTags": ["customer_support", "marketing"],
+    "capabilityTags": ["customer_support_automation", "knowledge_retrieval"],
+    "problemStatement": "Admissions teams fielded repetitive questions during enrollment season.",
+    "solutionSummary": "Launched a chatbot trained on admissions policies to handle FAQs and route complex cases.",
+    "workflowSteps": [
+      "Index admissions policies",
+      "Provide answers with citation",
+      "Escalate complex requests to staff"
+    ],
+    "deploymentType": "customer_facing",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Anthropic",
+      "modelFamily": "Claude 3",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Student data excluded; chatbot uses policy content only.",
+    "valueMetrics": [
+      {"metric": "Deflection rate", "value": "38", "unit": "%", "sourceRef": "src-003"}
+    ],
+    "risksAndMitigations": [
+      "Knowledge base reviewed weekly by admissions team."
+    ],
+    "createdAt": "2023-11-10",
+    "updatedAt": "2024-03-02",
+    "lastVerifiedAt": "2024-03-02",
+    "confidenceScore": 73,
+    "sources": [
+      {
+        "id": "src-003",
+        "url": "https://example.com/brighton/admissions-chatbot",
+        "title": "Brighton University launches admissions chatbot",
+        "publisher": "Campus Updates",
+        "publishedAt": "2023-12-01",
+        "retrievedAt": "2024-03-02",
+        "excerpt": "Chatbot handles common admissions questions with human escalation.",
+        "sourceType": "news",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-004",
+    "title": "Contract Review Assistant",
+    "company": {
+      "id": "co-004",
+      "name": "LexGuard Legal",
+      "website": "https://example.com/lexguard",
+      "industry": "legal",
+      "subIndustry": "Legal Services",
+      "sizeBand": "MM",
+      "hqLocation": "San Francisco, CA",
+      "description": "Corporate legal advisory firm."
+    },
+    "industryTags": ["legal"],
+    "functionTags": ["legal_ops", "compliance"],
+    "capabilityTags": ["document_intelligence", "regulatory_compliance"],
+    "problemStatement": "Legal teams needed faster review of vendor contracts with consistent redlines.",
+    "solutionSummary": "Implemented a contract assistant that flags risky clauses and suggests standard language.",
+    "workflowSteps": [
+      "Upload contract",
+      "Identify clause deviations",
+      "Generate redline suggestions",
+      "Lawyer approves edits"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "scaled",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": true
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Contracts retained per legal policy and encrypted at rest.",
+    "valueMetrics": [
+      {"metric": "Review cycle time", "value": "35", "unit": "% reduction", "sourceRef": "src-004"}
+    ],
+    "risksAndMitigations": [
+      "Mandatory attorney approval for outbound redlines."
+    ],
+    "createdAt": "2023-09-15",
+    "updatedAt": "2024-01-12",
+    "lastVerifiedAt": "2024-01-12",
+    "confidenceScore": 80,
+    "sources": [
+      {
+        "id": "src-004",
+        "url": "https://example.com/lexguard/contract-ai",
+        "title": "LexGuard introduces contract review assistant",
+        "publisher": "LegalTech Journal",
+        "publishedAt": "2023-10-05",
+        "retrievedAt": "2024-01-12",
+        "excerpt": "The assistant standardizes contract review and reduces cycle time.",
+        "sourceType": "case_study",
+        "credibilityWeight": 0.75
+      }
+    ]
+  },
+  {
+    "id": "uc-005",
+    "title": "Retail Associate Knowledge Hub",
+    "company": {
+      "id": "co-005",
+      "name": "Haven & Co.",
+      "website": "https://example.com/haven",
+      "industry": "retail",
+      "subIndustry": "Home Goods",
+      "sizeBand": "MM",
+      "hqLocation": "Austin, TX",
+      "description": "Omnichannel home goods retailer."
+    },
+    "industryTags": ["retail"],
+    "functionTags": ["customer_support", "sales"],
+    "capabilityTags": ["knowledge_retrieval", "customer_support_automation"],
+    "problemStatement": "Store associates needed quick answers about inventory and warranty policies.",
+    "solutionSummary": "Rolled out an associate knowledge hub accessible via tablets for real-time product guidance.",
+    "workflowSteps": [
+      "Search policy and product docs",
+      "Surface recommended answers",
+      "Escalate to HQ support when needed"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Google",
+      "modelFamily": "Gemini 1.5",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Access restricted to employee SSO; no customer PII stored.",
+    "valueMetrics": [
+      {"metric": "First contact resolution", "value": "18", "unit": "% improvement", "sourceRef": "src-005"}
+    ],
+    "risksAndMitigations": [
+      "Daily sync with product and warranty updates."
+    ],
+    "createdAt": "2023-08-02",
+    "updatedAt": "2024-02-14",
+    "lastVerifiedAt": "2024-02-14",
+    "confidenceScore": 70,
+    "sources": [
+      {
+        "id": "src-005",
+        "url": "https://example.com/haven/associate-hub",
+        "title": "Haven & Co. deploys AI knowledge hub",
+        "publisher": "Retail Today",
+        "publishedAt": "2023-09-12",
+        "retrievedAt": "2024-02-14",
+        "excerpt": "Tablet-based hub answers policy questions for associates.",
+        "sourceType": "news",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-006",
+    "title": "Manufacturing Maintenance Copilot",
+    "company": {
+      "id": "co-006",
+      "name": "ForgeWorks",
+      "website": "https://example.com/forgeworks",
+      "industry": "manufacturing",
+      "subIndustry": "Industrial Equipment",
+      "sizeBand": "ENT",
+      "hqLocation": "Cleveland, OH",
+      "description": "Industrial equipment manufacturer."
+    },
+    "industryTags": ["manufacturing"],
+    "functionTags": ["IT", "analytics"],
+    "capabilityTags": ["decision_support", "workflow_orchestration"],
+    "problemStatement": "Technicians required fast access to maintenance manuals and incident history.",
+    "solutionSummary": "Implemented a maintenance copilot that recommends repair steps and parts availability.",
+    "workflowSteps": [
+      "Retrieve equipment manuals",
+      "Summarize known issues",
+      "Recommend repair plan",
+      "Log actions in CMMS"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Cohere",
+      "modelFamily": "Command",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Equipment logs retained for 24 months per safety policy.",
+    "valueMetrics": [
+      {"metric": "Downtime reduction", "value": "12", "unit": "%", "sourceRef": "src-006"}
+    ],
+    "risksAndMitigations": [
+      "Safety steps highlighted in every recommendation."
+    ],
+    "createdAt": "2023-07-21",
+    "updatedAt": "2024-03-08",
+    "lastVerifiedAt": "2024-03-08",
+    "confidenceScore": 69,
+    "sources": [
+      {
+        "id": "src-006",
+        "url": "https://example.com/forgeworks/maintenance-copilot",
+        "title": "ForgeWorks launches maintenance copilot",
+        "publisher": "Manufacturing Weekly",
+        "publishedAt": "2023-08-10",
+        "retrievedAt": "2024-03-08",
+        "excerpt": "The copilot speeds up maintenance planning and parts lookup.",
+        "sourceType": "news",
+        "credibilityWeight": 0.55
+      }
+    ]
+  },
+  {
+    "id": "uc-007",
+    "title": "Logistics Dispatch Optimizer",
+    "company": {
+      "id": "co-007",
+      "name": "RouteGrid",
+      "website": "https://example.com/routegrid",
+      "industry": "logistics",
+      "subIndustry": "Last-mile Delivery",
+      "sizeBand": "MM",
+      "hqLocation": "Atlanta, GA",
+      "description": "Regional last-mile logistics provider."
+    },
+    "industryTags": ["logistics"],
+    "functionTags": ["analytics", "IT"],
+    "capabilityTags": ["decision_support", "workflow_orchestration"],
+    "problemStatement": "Dispatch teams needed faster route planning during demand spikes.",
+    "solutionSummary": "Adopted a dispatch optimizer that proposes route groupings with human approval.",
+    "workflowSteps": [
+      "Import delivery orders",
+      "Cluster routes by geography",
+      "Planner approves adjustments",
+      "Send routes to drivers"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": false,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Customer addresses masked after delivery completion.",
+    "valueMetrics": [
+      {"metric": "Miles reduced", "value": "9", "unit": "%", "sourceRef": "src-007"}
+    ],
+    "risksAndMitigations": [
+      "Planner approval required before dispatch."
+    ],
+    "createdAt": "2023-10-05",
+    "updatedAt": "2024-04-05",
+    "lastVerifiedAt": "2024-04-05",
+    "confidenceScore": 71,
+    "sources": [
+      {
+        "id": "src-007",
+        "url": "https://example.com/routegrid/dispatch-optimizer",
+        "title": "RouteGrid tests AI dispatch assistant",
+        "publisher": "Logistics Digest",
+        "publishedAt": "2023-11-01",
+        "retrievedAt": "2024-04-05",
+        "excerpt": "RouteGrid reports improved route efficiency using AI suggestions.",
+        "sourceType": "blog",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-008",
+    "title": "Energy Grid Incident Summaries",
+    "company": {
+      "id": "co-008",
+      "name": "Solstice Energy",
+      "website": "https://example.com/solstice",
+      "industry": "energy",
+      "subIndustry": "Utilities",
+      "sizeBand": "ENT",
+      "hqLocation": "Denver, CO",
+      "description": "Electric utility provider."
+    },
+    "industryTags": ["energy"],
+    "functionTags": ["IT", "security"],
+    "capabilityTags": ["document_intelligence", "decision_support"],
+    "problemStatement": "Control room teams needed faster summaries of incident logs during outages.",
+    "solutionSummary": "Built an incident summarization tool that consolidates logs and recommended response steps.",
+    "workflowSteps": [
+      "Ingest outage logs",
+      "Summarize incident timeline",
+      "Recommend response checklist",
+      "Supervisor confirms action"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "pilot",
+    "modelInfo": {
+      "vendor": "Azure OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Incident data retained per regulatory requirements.",
+    "valueMetrics": [
+      {"metric": "Response time", "value": "14", "unit": "% faster", "sourceRef": "src-008"}
+    ],
+    "risksAndMitigations": [
+      "Critical actions require supervisor approval."
+    ],
+    "createdAt": "2024-01-05",
+    "updatedAt": "2024-04-22",
+    "lastVerifiedAt": "2024-04-22",
+    "confidenceScore": 68,
+    "sources": [
+      {
+        "id": "src-008",
+        "url": "https://example.com/solstice/incident-summaries",
+        "title": "Solstice pilots AI incident summaries",
+        "publisher": "Energy Insights",
+        "publishedAt": "2024-01-28",
+        "retrievedAt": "2024-04-22",
+        "excerpt": "The pilot focuses on summarizing grid incidents and response actions.",
+        "sourceType": "press",
+        "credibilityWeight": 0.65
+      }
+    ]
+  },
+  {
+    "id": "uc-009",
+    "title": "Public Sector Grant Assistant",
+    "company": {
+      "id": "co-009",
+      "name": "City of Evergreen",
+      "website": "https://example.com/evergreen",
+      "industry": "public_sector",
+      "subIndustry": "Municipal Government",
+      "sizeBand": "ENT",
+      "hqLocation": "Evergreen, WA",
+      "description": "Municipal government services."
+    },
+    "industryTags": ["public_sector"],
+    "functionTags": ["compliance", "analytics"],
+    "capabilityTags": ["document_intelligence", "workflow_orchestration"],
+    "problemStatement": "Grant managers struggled to track eligibility requirements across programs.",
+    "solutionSummary": "Implemented a grant assistant that summarizes requirements and tracks documentation.",
+    "workflowSteps": [
+      "Index grant program rules",
+      "Summarize eligibility",
+      "Generate checklist for applicants",
+      "Review submissions"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "pilot",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Public records policy enforced; no personal data stored.",
+    "valueMetrics": [
+      {"metric": "Application review time", "value": "25", "unit": "% reduction", "sourceRef": "src-009"}
+    ],
+    "risksAndMitigations": [
+      "Human review required before grant decisions."
+    ],
+    "createdAt": "2024-02-10",
+    "updatedAt": "2024-04-30",
+    "lastVerifiedAt": "2024-04-30",
+    "confidenceScore": 66,
+    "sources": [
+      {
+        "id": "src-009",
+        "url": "https://example.com/evergreen/grant-assistant",
+        "title": "Evergreen introduces grant assistant",
+        "publisher": "Public Sector Tech",
+        "publishedAt": "2024-02-28",
+        "retrievedAt": "2024-04-30",
+        "excerpt": "The assistant improves grant eligibility review and documentation.",
+        "sourceType": "news",
+        "credibilityWeight": 0.55
+      }
+    ]
+  },
+  {
+    "id": "uc-010",
+    "title": "Developer Productivity Assistant",
+    "company": {
+      "id": "co-010",
+      "name": "CloudLattice",
+      "website": "https://example.com/cloudlattice",
+      "industry": "technology",
+      "subIndustry": "SaaS",
+      "sizeBand": "ENT",
+      "hqLocation": "Seattle, WA",
+      "description": "Enterprise SaaS platform for workflow automation."
+    },
+    "industryTags": ["technology"],
+    "functionTags": ["IT", "analytics"],
+    "capabilityTags": ["developer_productivity", "knowledge_retrieval"],
+    "problemStatement": "Engineers lost time searching internal runbooks and architecture docs.",
+    "solutionSummary": "Introduced a developer assistant that answers questions with citations from internal docs.",
+    "workflowSteps": [
+      "Index runbooks and design docs",
+      "Answer queries with citations",
+      "Escalate to on-call if uncertain"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Only approved repositories in retrieval index.",
+    "valueMetrics": [
+      {"metric": "Ticket resolution time", "value": "19", "unit": "% reduction", "sourceRef": "src-010"}
+    ],
+    "risksAndMitigations": [
+      "Citations required before use in production changes."
+    ],
+    "createdAt": "2023-06-12",
+    "updatedAt": "2024-05-01",
+    "lastVerifiedAt": "2024-05-01",
+    "confidenceScore": 85,
+    "sources": [
+      {
+        "id": "src-010",
+        "url": "https://example.com/cloudlattice/dev-assistant",
+        "title": "CloudLattice rolls out developer assistant",
+        "publisher": "DevOps Weekly",
+        "publishedAt": "2023-07-01",
+        "retrievedAt": "2024-05-01",
+        "excerpt": "Internal assistant provides citations for runbook answers.",
+        "sourceType": "case_study",
+        "credibilityWeight": 0.8
+      }
+    ]
+  },
+  {
+    "id": "uc-011",
+    "title": "Telecom Call Center Wrap-Up Automation",
+    "company": {
+      "id": "co-011",
+      "name": "SignalWave",
+      "website": "https://example.com/signalwave",
+      "industry": "telecom",
+      "subIndustry": "Wireless Carrier",
+      "sizeBand": "ENT",
+      "hqLocation": "Dallas, TX",
+      "description": "National wireless carrier."
+    },
+    "industryTags": ["telecom"],
+    "functionTags": ["customer_support"],
+    "capabilityTags": ["call_intelligence", "customer_support_automation"],
+    "problemStatement": "Agents spent time summarizing calls and updating CRM notes.",
+    "solutionSummary": "Adopted a call intelligence tool that drafts post-call summaries and follow-ups.",
+    "workflowSteps": [
+      "Transcribe call",
+      "Summarize issue and resolution",
+      "Agent confirms CRM update"
+    ],
+    "deploymentType": "embedded_feature",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Google",
+      "modelFamily": "Gemini 1.0",
+      "rag": false,
+      "fineTune": false
+    },
+    "dataSensitivity": "PII",
+    "governanceNotes": "Consent required for call recording; PII masked in analytics.",
+    "valueMetrics": [
+      {"metric": "After-call work", "value": "30", "unit": "% reduction", "sourceRef": "src-011"}
+    ],
+    "risksAndMitigations": [
+      "Agent review required before CRM updates."
+    ],
+    "createdAt": "2023-12-05",
+    "updatedAt": "2024-04-12",
+    "lastVerifiedAt": "2024-04-12",
+    "confidenceScore": 78,
+    "sources": [
+      {
+        "id": "src-011",
+        "url": "https://example.com/signalwave/call-intelligence",
+        "title": "SignalWave accelerates call wrap-up",
+        "publisher": "Telecom Today",
+        "publishedAt": "2024-01-15",
+        "retrievedAt": "2024-04-12",
+        "excerpt": "The solution reduces after-call work with summarization.",
+        "sourceType": "press",
+        "credibilityWeight": 0.7
+      }
+    ]
+  },
+  {
+    "id": "uc-012",
+    "title": "Media Content Rights Analyzer",
+    "company": {
+      "id": "co-012",
+      "name": "StreamForge",
+      "website": "https://example.com/streamforge",
+      "industry": "media",
+      "subIndustry": "Streaming",
+      "sizeBand": "ENT",
+      "hqLocation": "Los Angeles, CA",
+      "description": "Global streaming platform."
+    },
+    "industryTags": ["media"],
+    "functionTags": ["legal_ops", "compliance"],
+    "capabilityTags": ["document_intelligence", "regulatory_compliance"],
+    "problemStatement": "Content teams needed to interpret rights agreements across regions.",
+    "solutionSummary": "Created a rights analyzer that summarizes territory restrictions and renewal dates.",
+    "workflowSteps": [
+      "Parse rights contracts",
+      "Extract territory and window details",
+      "Alert teams before expirations"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Anthropic",
+      "modelFamily": "Claude 3",
+      "rag": true,
+      "fineTune": true
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Contracts stored in encrypted repository; access logged.",
+    "valueMetrics": [
+      {"metric": "Rights review time", "value": "40", "unit": "% reduction", "sourceRef": "src-012"}
+    ],
+    "risksAndMitigations": [
+      "Legal team verifies summaries before distribution."
+    ],
+    "createdAt": "2023-05-18",
+    "updatedAt": "2024-02-25",
+    "lastVerifiedAt": "2024-02-25",
+    "confidenceScore": 76,
+    "sources": [
+      {
+        "id": "src-012",
+        "url": "https://example.com/streamforge/rights-analyzer",
+        "title": "StreamForge automates rights reviews",
+        "publisher": "MediaTech Review",
+        "publishedAt": "2023-06-20",
+        "retrievedAt": "2024-02-25",
+        "excerpt": "AI tool summarizes rights agreements across territories.",
+        "sourceType": "case_study",
+        "credibilityWeight": 0.75
+      }
+    ]
+  },
+  {
+    "id": "uc-013",
+    "title": "Customer Support Email Triage",
+    "company": {
+      "id": "co-013",
+      "name": "NovaRetail",
+      "website": "https://example.com/novaretail",
+      "industry": "retail",
+      "subIndustry": "E-commerce",
+      "sizeBand": "MM",
+      "hqLocation": "Portland, OR",
+      "description": "E-commerce marketplace."
+    },
+    "industryTags": ["retail"],
+    "functionTags": ["customer_support"],
+    "capabilityTags": ["customer_support_automation", "workflow_orchestration"],
+    "problemStatement": "Support inbox overflowed during promotions.",
+    "solutionSummary": "Implemented an AI triage system that classifies requests and drafts responses.",
+    "workflowSteps": [
+      "Classify incoming emails",
+      "Draft response templates",
+      "Agent edits and sends"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "PII",
+    "governanceNotes": "PII masked in training prompts; retention limited to 30 days.",
+    "valueMetrics": [
+      {"metric": "Response time", "value": "28", "unit": "% faster", "sourceRef": "src-013"}
+    ],
+    "risksAndMitigations": [
+      "Agent approval required before sending external emails."
+    ],
+    "createdAt": "2023-09-01",
+    "updatedAt": "2024-02-08",
+    "lastVerifiedAt": "2024-02-08",
+    "confidenceScore": 74,
+    "sources": [
+      {
+        "id": "src-013",
+        "url": "https://example.com/novaretail/support-triage",
+        "title": "NovaRetail improves support triage",
+        "publisher": "Ecom Insights",
+        "publishedAt": "2023-10-15",
+        "retrievedAt": "2024-02-08",
+        "excerpt": "AI triage improved response times during peak demand.",
+        "sourceType": "blog",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-014",
+    "title": "Fraud Investigation Assistant",
+    "company": {
+      "id": "co-014",
+      "name": "SecureFunds",
+      "website": "https://example.com/securefunds",
+      "industry": "finance",
+      "subIndustry": "Payments",
+      "sizeBand": "ENT",
+      "hqLocation": "Charlotte, NC",
+      "description": "Payments processor focusing on SMBs."
+    },
+    "industryTags": ["finance"],
+    "functionTags": ["security", "compliance"],
+    "capabilityTags": ["fraud_detection", "decision_support"],
+    "problemStatement": "Analysts needed to correlate fraud signals across disparate systems.",
+    "solutionSummary": "Deployed an investigation assistant that summarizes cases with supporting evidence.",
+    "workflowSteps": [
+      "Aggregate fraud signals",
+      "Summarize case timeline",
+      "Analyst reviews and escalates"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "scaled",
+    "modelInfo": {
+      "vendor": "Azure OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "PCI",
+    "governanceNotes": "PCI data tokenized; audit logs retained for 7 years.",
+    "valueMetrics": [
+      {"metric": "Investigation time", "value": "33", "unit": "% reduction", "sourceRef": "src-014"}
+    ],
+    "risksAndMitigations": [
+      "Analysts validate all recommendations before action."
+    ],
+    "createdAt": "2023-04-28",
+    "updatedAt": "2024-01-30",
+    "lastVerifiedAt": "2024-01-30",
+    "confidenceScore": 81,
+    "sources": [
+      {
+        "id": "src-014",
+        "url": "https://example.com/securefunds/fraud-assistant",
+        "title": "SecureFunds expands fraud investigation AI",
+        "publisher": "FinTech Chronicle",
+        "publishedAt": "2023-05-20",
+        "retrievedAt": "2024-01-30",
+        "excerpt": "Assistant reduces investigation time with evidence summaries.",
+        "sourceType": "case_study",
+        "credibilityWeight": 0.78
+      }
+    ]
+  },
+  {
+    "id": "uc-015",
+    "title": "Supply Chain Purchase Order Companion",
+    "company": {
+      "id": "co-015",
+      "name": "Allied Manufacturing",
+      "website": "https://example.com/allied",
+      "industry": "manufacturing",
+      "subIndustry": "Automotive",
+      "sizeBand": "ENT",
+      "hqLocation": "Detroit, MI",
+      "description": "Automotive parts manufacturer."
+    },
+    "industryTags": ["manufacturing"],
+    "functionTags": ["procurement", "analytics"],
+    "capabilityTags": ["workflow_orchestration", "data_enrichment"],
+    "problemStatement": "Procurement teams struggled to reconcile purchase order discrepancies.",
+    "solutionSummary": "Rolled out a PO companion that summarizes changes and flags anomalies.",
+    "workflowSteps": [
+      "Ingest PO revisions",
+      "Highlight quantity and price changes",
+      "Recommend next steps",
+      "Buyer confirms updates"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Supplier data shared only with authorized procurement staff.",
+    "valueMetrics": [
+      {"metric": "PO exception handling", "value": "27", "unit": "% faster", "sourceRef": "src-015"}
+    ],
+    "risksAndMitigations": [
+      "Buyer approval required before PO updates."
+    ],
+    "createdAt": "2023-03-12",
+    "updatedAt": "2024-02-20",
+    "lastVerifiedAt": "2024-02-20",
+    "confidenceScore": 72,
+    "sources": [
+      {
+        "id": "src-015",
+        "url": "https://example.com/allied/po-companion",
+        "title": "Allied Manufacturing streamlines PO management",
+        "publisher": "Supply Chain World",
+        "publishedAt": "2023-04-05",
+        "retrievedAt": "2024-02-20",
+        "excerpt": "AI companion reduces PO exception handling time.",
+        "sourceType": "case_study",
+        "credibilityWeight": 0.7
+      }
+    ]
+  },
+  {
+    "id": "uc-016",
+    "title": "Healthcare Prior Authorization Assistant",
+    "company": {
+      "id": "co-016",
+      "name": "WellPath Insurance",
+      "website": "https://example.com/wellpath",
+      "industry": "healthcare",
+      "subIndustry": "Health Insurance",
+      "sizeBand": "ENT",
+      "hqLocation": "Hartford, CT",
+      "description": "Regional health insurer."
+    },
+    "industryTags": ["healthcare"],
+    "functionTags": ["compliance", "finance_ops"],
+    "capabilityTags": ["regulatory_compliance", "document_intelligence"],
+    "problemStatement": "Prior authorization reviews were slow due to manual policy lookups.",
+    "solutionSummary": "Built an assistant that summarizes policy criteria and highlights missing info.",
+    "workflowSteps": [
+      "Ingest authorization request",
+      "Match against policy criteria",
+      "Highlight missing documentation",
+      "Reviewer approves or denies"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "pilot",
+    "modelInfo": {
+      "vendor": "Azure OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "PHI",
+    "governanceNotes": "PHI encrypted; model outputs stored in secure audit logs.",
+    "valueMetrics": [
+      {"metric": "Review turnaround", "value": "18", "unit": "% faster", "sourceRef": "src-016"}
+    ],
+    "risksAndMitigations": [
+      "Clinical reviewers validate all recommendations."
+    ],
+    "createdAt": "2024-01-20",
+    "updatedAt": "2024-04-15",
+    "lastVerifiedAt": "2024-04-15",
+    "confidenceScore": 67,
+    "sources": [
+      {
+        "id": "src-016",
+        "url": "https://example.com/wellpath/prior-auth",
+        "title": "WellPath pilots prior authorization assistant",
+        "publisher": "Healthcare IT News",
+        "publishedAt": "2024-02-18",
+        "retrievedAt": "2024-04-15",
+        "excerpt": "Assistant reduces manual policy lookups for reviewers.",
+        "sourceType": "news",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-017",
+    "title": "Education Curriculum Drafting Tool",
+    "company": {
+      "id": "co-017",
+      "name": "LearnLoop",
+      "website": "https://example.com/learnloop",
+      "industry": "education",
+      "subIndustry": "EdTech",
+      "sizeBand": "MM",
+      "hqLocation": "Raleigh, NC",
+      "description": "EdTech platform for K-12 districts."
+    },
+    "industryTags": ["education"],
+    "functionTags": ["marketing", "analytics"],
+    "capabilityTags": ["marketing_generation", "knowledge_retrieval"],
+    "problemStatement": "Curriculum teams needed faster drafting of lesson plans aligned with standards.",
+    "solutionSummary": "Released a drafting tool that suggests lesson structures and resources with citations.",
+    "workflowSteps": [
+      "Select standards and grade",
+      "Generate lesson outline",
+      "Educator edits and exports"
+    ],
+    "deploymentType": "customer_facing",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Anthropic",
+      "modelFamily": "Claude 3",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "none",
+    "governanceNotes": "No student data required; content references public standards.",
+    "valueMetrics": [
+      {"metric": "Lesson prep time", "value": "45", "unit": "% reduction", "sourceRef": "src-017"}
+    ],
+    "risksAndMitigations": [
+      "Teachers verify alignment before classroom use."
+    ],
+    "createdAt": "2023-10-30",
+    "updatedAt": "2024-03-18",
+    "lastVerifiedAt": "2024-03-18",
+    "confidenceScore": 79,
+    "sources": [
+      {
+        "id": "src-017",
+        "url": "https://example.com/learnloop/curriculum-tool",
+        "title": "LearnLoop launches AI curriculum drafting",
+        "publisher": "EdTech Report",
+        "publishedAt": "2023-11-22",
+        "retrievedAt": "2024-03-18",
+        "excerpt": "Tool helps educators draft standards-aligned lesson plans.",
+        "sourceType": "press",
+        "credibilityWeight": 0.65
+      }
+    ]
+  },
+  {
+    "id": "uc-018",
+    "title": "Energy Customer Billing Assistant",
+    "company": {
+      "id": "co-018",
+      "name": "Gridline Power",
+      "website": "https://example.com/gridline",
+      "industry": "energy",
+      "subIndustry": "Retail Energy",
+      "sizeBand": "MM",
+      "hqLocation": "Phoenix, AZ",
+      "description": "Retail energy provider for residential customers."
+    },
+    "industryTags": ["energy"],
+    "functionTags": ["customer_support"],
+    "capabilityTags": ["customer_support_automation", "data_enrichment"],
+    "problemStatement": "Billing inquiries spiked during rate changes.",
+    "solutionSummary": "Implemented a billing assistant that explains rate changes and escalates disputes.",
+    "workflowSteps": [
+      "Retrieve customer billing history",
+      "Explain rate adjustments",
+      "Escalate disputes to billing team"
+    ],
+    "deploymentType": "customer_facing",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Google",
+      "modelFamily": "Gemini 1.5",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "PII",
+    "governanceNotes": "Customer data masked in analytics; opt-in required.",
+    "valueMetrics": [
+      {"metric": "Call volume reduction", "value": "21", "unit": "%", "sourceRef": "src-018"}
+    ],
+    "risksAndMitigations": [
+      "Escalation required for billing disputes."
+    ],
+    "createdAt": "2023-09-20",
+    "updatedAt": "2024-02-28",
+    "lastVerifiedAt": "2024-02-28",
+    "confidenceScore": 72,
+    "sources": [
+      {
+        "id": "src-018",
+        "url": "https://example.com/gridline/billing-assistant",
+        "title": "Gridline Power launches billing assistant",
+        "publisher": "Energy Customer News",
+        "publishedAt": "2023-10-05",
+        "retrievedAt": "2024-02-28",
+        "excerpt": "Assistant reduces billing inquiries during rate changes.",
+        "sourceType": "blog",
+        "credibilityWeight": 0.6
+      }
+    ]
+  },
+  {
+    "id": "uc-019",
+    "title": "Public Safety Report Summaries",
+    "company": {
+      "id": "co-019",
+      "name": "Metro Safety Department",
+      "website": "https://example.com/metrosafety",
+      "industry": "public_sector",
+      "subIndustry": "Public Safety",
+      "sizeBand": "ENT",
+      "hqLocation": "Columbus, OH",
+      "description": "City public safety department."
+    },
+    "industryTags": ["public_sector"],
+    "functionTags": ["analytics", "compliance"],
+    "capabilityTags": ["document_intelligence", "decision_support"],
+    "problemStatement": "Supervisors needed weekly summaries of incident reports.",
+    "solutionSummary": "Built a summarization tool that compiles incident highlights with approvals.",
+    "workflowSteps": [
+      "Collect incident reports",
+      "Summarize weekly trends",
+      "Supervisor approves dissemination"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "pilot",
+    "modelInfo": {
+      "vendor": "OpenAI",
+      "modelFamily": "GPT-4",
+      "rag": true,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Reports retained per public record policies.",
+    "valueMetrics": [
+      {"metric": "Report review time", "value": "20", "unit": "% reduction", "sourceRef": "src-019"}
+    ],
+    "risksAndMitigations": [
+      "Supervisor approval required before distribution."
+    ],
+    "createdAt": "2024-02-05",
+    "updatedAt": "2024-04-25",
+    "lastVerifiedAt": "2024-04-25",
+    "confidenceScore": 64,
+    "sources": [
+      {
+        "id": "src-019",
+        "url": "https://example.com/metrosafety/incident-summaries",
+        "title": "Metro Safety pilots AI incident summaries",
+        "publisher": "GovTech Today",
+        "publishedAt": "2024-03-05",
+        "retrievedAt": "2024-04-25",
+        "excerpt": "AI summaries help supervisors review incidents faster.",
+        "sourceType": "news",
+        "credibilityWeight": 0.55
+      }
+    ]
+  },
+  {
+    "id": "uc-020",
+    "title": "Marketing Campaign Ideation Studio",
+    "company": {
+      "id": "co-020",
+      "name": "Pulse Telecom",
+      "website": "https://example.com/pulsetelecom",
+      "industry": "telecom",
+      "subIndustry": "Fiber Broadband",
+      "sizeBand": "MM",
+      "hqLocation": "Nashville, TN",
+      "description": "Regional fiber broadband provider."
+    },
+    "industryTags": ["telecom"],
+    "functionTags": ["marketing"],
+    "capabilityTags": ["marketing_generation", "workflow_orchestration"],
+    "problemStatement": "Marketing teams needed fresh campaign concepts with consistent brand voice.",
+    "solutionSummary": "Created a campaign ideation studio that generates draft concepts and briefs.",
+    "workflowSteps": [
+      "Select campaign objective",
+      "Generate concept variations",
+      "Brand team reviews and edits"
+    ],
+    "deploymentType": "internal_tool",
+    "maturityStage": "prod",
+    "modelInfo": {
+      "vendor": "Anthropic",
+      "modelFamily": "Claude 3",
+      "rag": false,
+      "fineTune": false
+    },
+    "dataSensitivity": "internal",
+    "governanceNotes": "Brand guidelines embedded in prompt templates.",
+    "valueMetrics": [
+      {"metric": "Campaign ideation time", "value": "50", "unit": "% reduction", "sourceRef": "src-020"}
+    ],
+    "risksAndMitigations": [
+      "Brand approval required before publication."
+    ],
+    "createdAt": "2023-08-15",
+    "updatedAt": "2024-03-12",
+    "lastVerifiedAt": "2024-03-12",
+    "confidenceScore": 75,
+    "sources": [
+      {
+        "id": "src-020",
+        "url": "https://example.com/pulsetelecom/ideation-studio",
+        "title": "Pulse Telecom launches marketing ideation studio",
+        "publisher": "Marketing AI Journal",
+        "publishedAt": "2023-09-01",
+        "retrievedAt": "2024-03-12",
+        "excerpt": "Studio helps marketing teams draft campaign briefs.",
+        "sourceType": "press",
+        "credibilityWeight": 0.65
+      }
+    ]
+  }
+]
