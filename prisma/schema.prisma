@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum Industry {
+  finance
+  healthcare
+  education
+  legal
+  retail
+  manufacturing
+  logistics
+  energy
+  public_sector
+  technology
+  telecom
+  media
+  other
+}
+
+enum CorporateFunction {
+  HR
+  finance_ops
+  legal_ops
+  sales
+  marketing
+  customer_support
+  IT
+  security
+  procurement
+  analytics
+  compliance
+}
+
+enum DataSensitivity {
+  none
+  internal
+  PII
+  PHI
+  PCI
+}
+
+enum DeploymentType {
+  internal_tool
+  customer_facing
+  agentic_workflow
+  embedded_feature
+}
+
+enum MaturityStage {
+  pilot
+  prod
+  scaled
+}
+
+enum SourceType {
+  press
+  blog
+  case_study
+  news
+}
+
+model Company {
+  id          String   @id @default(uuid())
+  name        String
+  website     String
+  industry    Industry
+  subIndustry String?
+  sizeBand    String?
+  hqLocation  String?
+  description String?
+  useCases    UseCase[]
+}
+
+model UseCase {
+  id               String   @id @default(uuid())
+  title            String
+  companyId        String
+  company          Company  @relation(fields: [companyId], references: [id])
+  industryTags     Json
+  functionTags     Json
+  capabilityTags   Json
+  problemStatement String
+  solutionSummary  String
+  workflowSteps    Json
+  deploymentType   DeploymentType
+  maturityStage    MaturityStage
+  modelInfo        Json?
+  dataSensitivity  DataSensitivity
+  governanceNotes  String?
+  valueMetrics     Json
+  risksMitigations Json
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  lastVerifiedAt   DateTime
+  confidenceScore  Int
+  sources          Source[]
+}
+
+model Source {
+  id               String     @id @default(uuid())
+  useCaseId        String
+  useCase          UseCase    @relation(fields: [useCaseId], references: [id])
+  url              String     @unique
+  title            String
+  publisher        String
+  publishedAt      DateTime
+  retrievedAt      DateTime
+  excerpt          String
+  sourceType       SourceType
+  credibilityWeight Float
+}
